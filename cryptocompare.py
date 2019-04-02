@@ -11,7 +11,7 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 from plotly import tools
 from datetime import date
-import datetime
+
 
 #Get the coin list to populate currency picklist
 url = "https://coinmarketcap.com/"
@@ -226,7 +226,7 @@ def update_value(clicks, coin1, coin2):
         fig.add_trace(trace6,2,2) 
         fig.add_trace(trace7,2,2) 
 
-        fig['layout']['xaxis4'].update(title='Date',range=[today_date,today_date])
+        fig['layout']['xaxis4'].update(title='Date')
         fig['layout']['yaxis4'].update(title='Price')
 
         #Return the figure to application output section
